@@ -1,0 +1,26 @@
+{
+  "name": "careernavigator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered career transition platform",
+  "scripts": {
+    "dev": "pnpm --parallel dev",
+    "build": "pnpm --recursive build",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint",
+    "clean": "pnpm --recursive clean"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "keywords": [
+    "career",
+    "job-search",
+    "ai",
+    "multi-agent",
+    "langchain"
+  ],
+  "author": "CareerNavigator Team",
+  "license": "MIT"
+}
