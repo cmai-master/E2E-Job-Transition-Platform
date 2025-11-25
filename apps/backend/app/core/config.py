@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "CareerNavigator API"
     VERSION: str = "0.1.0"
     API_V1_PREFIX: str = "/api/v1"
+    DEBUG: bool = Field(default=True, description="Debug mode")
 
     # CORS
     ALLOWED_ORIGINS: List[str] = [
@@ -67,6 +68,23 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = Field(default="HS256", description="JWT algorithm")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(
         default=30, description="Access token expiration in minutes"
+    )
+    REFRESH_TOKEN_EXPIRE_DAYS: int = Field(
+        default=7, description="Refresh token expiration in days"
+    )
+
+    # OAuth
+    GOOGLE_CLIENT_ID: Optional[str] = Field(
+        default=None, description="Google OAuth client ID"
+    )
+    GOOGLE_CLIENT_SECRET: Optional[str] = Field(
+        default=None, description="Google OAuth client secret"
+    )
+    LINKEDIN_CLIENT_ID: Optional[str] = Field(
+        default=None, description="LinkedIn OAuth client ID"
+    )
+    LINKEDIN_CLIENT_SECRET: Optional[str] = Field(
+        default=None, description="LinkedIn OAuth client secret"
     )
 
     # Azure (Production)
